@@ -1,5 +1,4 @@
 # lovegame.git.io
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,12 +25,13 @@
             margin: auto;
             padding: 20px;
         }
-        .game-box {
+        .game-box, .quiz-box, .fortune-box {
             background: #ffccd5;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            margin: 30px auto;
+            max-width: 90%;
         }
         .button {
             background: #ff4d6d;
@@ -43,6 +43,8 @@
             cursor: pointer;
             margin-top: 20px;
             transition: 0.3s;
+            width: 100%;
+            max-width: 300px;
         }
         .button:hover {
             background: #590d22;
@@ -52,16 +54,30 @@
             font-weight: bold;
             margin-top: 20px;
         }
-        .quiz-box, .fortune-box {
-            background: #ff9a8c;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
         .question {
             font-size: 18px;
             margin-top: 10px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ff4d6d;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 300px;
+        }
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px;
+            }
+            .button {
+                font-size: 16px;
+                padding: 12px;
+            }
+            .love-result {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
